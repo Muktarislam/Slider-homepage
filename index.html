@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beutifull Home page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left-col">
+            <img src="images/logo.png" class="logo" alt="" srcset="">
+            <div class="content">
+                <h1>Add Plants to your living space</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae veritatis sequi voluptate hic dolore quod qui ipsam eaque </p>
+                <button type="button">LEARN MORE</button>
+                <div class="copyright">
+                    <p>This Website Created By M.A. Mithon</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="slider">
+                <img src="images/pic-1.jpg" id = "slide" alt="" srcset="">
+            </div>
+            <div class="slider-content">
+                <h2>Where can i find ideas for small room?</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing voluptate <br>
+                elit. Quae veritatis sequi voluptate hic consectetur adipisicing 
+                <br> dolore quod qui ipsam eaque </p>
+                <div class="controller">
+                    <img src="images/back.png" id="backBtn" alt="" srcset="">
+                    <div class="vertical-line"></div>
+                    <img src="images/next.png" id = "nextBtn" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var slide = document.getElementById('slide');
+        var backBtn = document.getElementById('backBtn');
+        var nextBtn = document.getElementById('nextBtn');
+        
+        var slideImages = new Array(
+            "images/pic-1.jpg",
+            "images/pic-2.jpg",
+            "images/pic-3.jpg",
+            "images/pic-4.jpg",
+            "images/pic-5.jpg",
+            "images/pic-6.jpg",
+            "images/pic-7.jpg",
+            "images/pic-8.jpg",
+            "images/pic-9.jpg",
+            "images/pic-10.jpg",
+            "images/pic-11.jpg",
+            "images/pic-12.jpg",
+            "images/pic-13.jpg",
+            "images/pic-14.jpg",
+            "images/pic-15.jpg",
+            "images/pic-16.jpg",
+            "images/pic-17.jpg",
+            "images/pic-18.jpg",
+            "images/pic-19.jpg",
+            "images/pic-20.jpg",
+            "images/pic-21.jpg",
+        );
+
+        let i = 0;
+        nextBtn.onclick = function(){
+            if(i < 20){
+                slide.src = slideImages[i+1]
+            i++;
+            }
+        }
+        backBtn.onclick = function(){
+            if(i > 0){
+                slide.src = slideImages[i-1]
+            i--;
+            }
+        }
+
+    </script>
+</body>
+</html>
